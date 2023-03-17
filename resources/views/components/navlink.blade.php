@@ -8,7 +8,7 @@
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="/subjects">Subject</a></li>
                 <li><p></p></li>
-                <li><a class="text-decoration-none text-light" href="#">Class</a></li>
+                <li><a class="text-decoration-none text-light" href="/classes">Class</a></li>
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="#">Faculty</a></li>
                 <li><p></p></li>

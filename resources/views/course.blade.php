@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <div class="container mt-2">
+    <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <h2>Courses</h2>
@@ -20,8 +20,8 @@
                 <b>Course List</b>
             </div>
             <div class="card-body">
-                <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search.." title="Type in a name" class="w-100">
-                <table class="table table-bordered table-striped mt-1" id="myTable">
+                <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search course.." title="Type in a name" class="w-100">
+                <table class="table table-bordered table-striped table-hover mt-1" id="myTable">
                     <tr>
                         <th class="text-center" width="5%">Id</th>
                         <th class="text-center">Course</th>

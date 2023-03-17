@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Classes;
 use Illuminate\Support\Facades\DB;
 
-class CourseController extends Controller
+class ClassesController extends Controller
 {
     /**
     * Display a listing of the resource.
@@ -16,7 +17,8 @@ class CourseController extends Controller
     public function index()
     {
     $data['courses'] = Course::all();
-    return view('course', $data, ['title'=>'Course Page']);
+    $classes = DB::select("CALL GetClass()");
+    return view('class', $data, ['title'=>'Class Page', 'classes'=>$classes]);
     }
     /**
     * Show the form for creating a new resource.
@@ -25,7 +27,8 @@ class CourseController extends Controller
     */
     public function create()
     {
-    return view('addCourse',['title'=>'Add Course Page']);
+    $data['courses'] = Course::all();
+    return view('addClass',$data,['title'=>'Add Class Page']);
     }
     /**
     * Store a newly created resource in storage.
@@ -36,15 +39,17 @@ class CourseController extends Controller
     public function store(Request $request)
     {
     $request->validate([
-    'course' => 'required',
-    'description' => 'required',
+    'course_id' => 'required',
+    'level' => 'required',
+    'section' => 'required'
     ]);
-    $course = new Course();
-    $course->course = $request->course;
-    $course->description = $request->description;
-    $course->save();
-    return redirect('/courses')
-    ->with('success','Course Record has been created successfully.');
+    $class = new Classes();
+    $class->course_id = $request->course_id;
+    $class->level = $request->level;
+    $class->section = $request->section;
+    $class->save();
+    return redirect('/classes')
+    ->with('success','Class Record has been created successfully.');
     }
     /**
     * Display the specified resource.
@@ -62,9 +67,10 @@ class CourseController extends Controller
     * @param  \App\Company  $company
     * @return \Illuminate\Http\Response
     */
-    public function edit(Course $course)
+    public function edit(Classes $class)
     {
-    return view('editCourse', compact('course'), ['title'=>'Edit Course Page']);
+    $data['courses'] = Course::all();
+    return view('editClass', compact('class'), ['title'=>'Edit Class Page','courses'=>$data['courses']]);
     }
     /**
     * Update the specified resource in storage.
@@ -76,15 +82,17 @@ class CourseController extends Controller
     public function update(Request $request, $id)
     {
     $request->validate([
-    'course' => 'required',
-    'description' => 'required',
+    'course_id' => 'required',
+    'level' => 'required',
+    'section' => 'required'
     ]);
-    $course = Course::find($id);
-    $course->course = $request->course;
-    $course->description = $request->description;
-    $course->save();
-    return redirect('/courses')
-    ->with('success','Course Has Been updated successfully');
+    $class = Classes::find($id);
+    $class->course_id = $request->course_id;
+    $class->level = $request->level;
+    $class->section = $request->section;
+    $class->save();
+    return redirect('/classes')
+    ->with('success','Class Has Been updated successfully');
     }
     /**
     * Remove the specified resource from storage.
@@ -92,10 +100,10 @@ class CourseController extends Controller
     * @param  \App\Company  $company
     * @return \Illuminate\Http\Response
     */
-    public function destroy(Course $course)
+    public function destroy(Classes $class)
     {
-    $course->delete();
-    return redirect('/courses')
+    $class->delete();
+    return redirect('/classes')
     ->with('success',' Record has been deleted successfully');
     }
 }
