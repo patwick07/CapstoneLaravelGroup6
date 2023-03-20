@@ -12,7 +12,7 @@
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="/faculties">Faculty</a></li>
                 <li><p></p></li>
-                <li><a class="text-decoration-none text-light" href="#">Student</a></li>
+                <li><a class="text-decoration-none text-light" href="/students">Student</a></li>
             </ul>
         </div>
     </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\FacultyController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +33,7 @@ Route::get('/home', function () {
 });
 
 Route::resource('courses', CourseController::class);
-
 Route::resource('subjects', SubjectController::class);
-
 Route::resource('classes', ClassesController::class);
-
 Route::resource('faculties', FacultyController::class);
+Route::resource('students', StudentController::class);
