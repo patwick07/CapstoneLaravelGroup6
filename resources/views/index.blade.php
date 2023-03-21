@@ -1,6 +1,8 @@
 @extends('layouts.main')
 @section('content')
-    <div>
-        <h1>Welcome</h1>
+
+    <div class="welcome">
+        <h1>Welcome to Student Attendance Management System</h1>
+
     </div>
 @endsection
