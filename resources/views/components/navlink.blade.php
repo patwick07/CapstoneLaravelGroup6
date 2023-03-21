@@ -13,6 +13,8 @@
                 <li><a class="text-decoration-none text-light" href="/faculties">Faculty</a></li>
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="/students">Student</a></li>
+                <li><p></p></li>
+                <li><a class="text-decoration-none text-light" href="/class_subject">Class Per Subject</a></li>
             </ul>
         </div>
     </div>
