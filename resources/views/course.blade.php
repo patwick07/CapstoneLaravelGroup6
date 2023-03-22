@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <div class="container courses mt-2">
+    <div class="container-fluid courses mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <h2>Courses</h2>
