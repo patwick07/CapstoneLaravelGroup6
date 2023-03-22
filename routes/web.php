@@ -6,6 +6,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\Class_SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,4 @@ Route::resource('subjects', SubjectController::class);
 Route::resource('classes', ClassesController::class);
 Route::resource('faculties', FacultyController::class);
 Route::resource('students', StudentController::class);
+Route::resource('class_subject', Class_SubjectController::class);

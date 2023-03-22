@@ -3,10 +3,10 @@
     <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
-                <h2>Subjects</h2>
+                <h2>Class Per Subject</h2>
             </div>
             <div class="col-lg-12 margin-tb">
-                <a class="btn btn-outline-primary" href="{{ route('subjects.create') }}">Add Subject</a>
+                <a class="btn btn-primary" href="{{ route('class_subject.create') }}">Add Record</a>
             </div>
         </div>
     
@@ -17,31 +17,32 @@
         @endif
         <div class="card mt-1">
             <div class="card-header">
-                <b>Subject List</b>
+                <b>Class Per Subject List</b>
             </div>
             <div class="card-body">
-                <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search subject.." title="Type in a name" class="w-50">
+                <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search class.." title="Type in a name" class="w-100">
                 <table class="table table-bordered table-striped table-hover mt-1" id="myTable">
                     <tr>
                         <th class="text-center" width="5%">Id</th>
+                        <th class="text-center">Class</th>
                         <th class="text-center">Subject</th>
+                        <th class="text-center">Faculty</th>
                         <th class="text-center" width="150px">Action</th>
                     </tr>
-                    
-                    @foreach ($subjects as $subject)
+
+                    @foreach ($class_subject as $item)
                         <tr>
-                            <td>{{ $subject->id }}</td>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->class }}</td>
+                            <td>{{ $item->subject }}</td>
+                            <td>{{ $item->fname }}</td>
                             <td>
-                                <p><b>{{ $subject->subject }}</b></p>
-                                <small><i>{{ $subject->description }}</i></small>
-                            </td>
-                            <td>
-                                <form action="{{ route('subjects.destroy',$subject->id) }}" method="Post">
+                                <form action="{{ route('class_subject.destroy',$item->id) }}" method="Post">
                                     <div class="d-flex flex-row justify-content-around">
-                                        <a class="btn btn-outline-success" href="{{ route('subjects.edit',$subject->id) }}">Edit</a>
+                                        <a class="btn btn-primary" href="{{ route('class_subject.edit',$item->id) }}">Edit</a>
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                        <button type="submit" class="btn btn-danger">Delete</button>
                                     </div>
                                 </form>
                             </td>
@@ -50,6 +51,5 @@
                 </table>
             </div>
         </div>
-        {{-- {!! $subjects->links() !!} --}}
     </div>
 @endsection
