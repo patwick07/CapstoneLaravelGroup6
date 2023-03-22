@@ -11,8 +11,19 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         @vite(['resources/sass/app.scss', 'resources/css/app.css'])
     </head>
+
+    <style>
+        h2{
+            color: white;
+            background-color: #0B5ED7;
+            text-align: center;
+            margin-top: 10;
+            padding: 0;
+        }
+        </style>
+
     <body>
-        <h1>Student Attendance Management System</h1>
+        <h2>Student Attendance Management System</h2>
         <div class="d-flex flex-row">
             <x-navlink/>
             @yield('content')

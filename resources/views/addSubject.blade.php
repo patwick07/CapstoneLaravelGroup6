@@ -7,7 +7,7 @@
                     <h2>Add Subject</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="/subjects">Back</a>
+                    <a class="btn btn-outline-primary" href="/subjects">Back</a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-1">
-                    <button type="submit" class="btn btn-primary ml-3">Submit</button>
+                    <button type="submit" class="btn btn-outline-primary ml-3">Submit</button>
                 </div>
             </div>
         </form>

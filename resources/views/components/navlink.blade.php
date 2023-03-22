@@ -21,7 +21,7 @@
         width:15%;
     }
 </style>
-<div class=" main-container d-flex flex-column flex-shrink-0 p-3 text-bg-light" style="width: 280px;">
+<div class=" main-container d-flex flex-column flex-shrink-0 p-3 text-bg-light" style="width: 300px;">
     <div class="sidebar"  id="side_nav">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-dark text-decoration-none">
       <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
@@ -30,8 +30,8 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="index.php" class="nav-link text-dark">
-            <img src="https://img.icons8.com/stickers/256/home-page.png" width="28" height="28">
+        <a href="/index.php" class="nav-link text-dark">
+            <img src="https://img.icons8.com/ios-glyphs/256/speed.png" width="28" height="28">
           Dashboard
         </a>
       </li>
@@ -73,7 +73,7 @@
         <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
         <strong>mdo</strong>
       </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+      <ul class="dropdown-menu dropdown-menu-light text-large shadow">
         <li><a class="dropdown-item" href="#">Settings</a></li>
         <li><a class="dropdown-item" href="#">Profile</a></li>
         <li><hr class="dropdown-divider"></li>
