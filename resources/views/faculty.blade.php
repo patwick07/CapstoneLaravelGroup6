@@ -6,7 +6,7 @@
                 <h2>Faculty</h2>
             </div>
             <div class="col-lg-12 margin-tb">
-                <a class="btn btn-primary" href="{{ route('faculties.create') }}">Add Faculty</a>
+                <a class="btn btn-outline-primary" href="{{ route('faculties.create') }}">Add Faculty</a>
             </div>
         </div>
     
@@ -20,7 +20,7 @@
                 <b>Faculty List</b>
             </div>
             <div class="card-body">
-                <input type="text" id="myInput" onkeyup="mySearchFunction2()" placeholder="Search name.." title="Type in a name" class="w-100">
+                <input type="text" id="myInput" onkeyup="mySearchFunction2()" placeholder="Search name.." title="Type in a name" class="w-50">
                 <table class="table table-bordered table-striped table-hover mt-1" id="myTable">
                     <tr>
                         <th class="text-center" width="5%">Id</th>
@@ -43,10 +43,10 @@
                             <td>
                                 <form action="{{ route('faculties.destroy',$faculty->id) }}" method="Post">
                                     <div class="d-flex flex-row justify-content-around">
-                                        <a class="btn btn-primary" href="{{ route('faculties.edit',$faculty->id) }}">Edit</a>
+                                        <a class="btn btn-outline-success" href="{{ route('faculties.edit',$faculty->id) }}">Edit</a>
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
                                     </div>
                                 </form>
                             </td>
