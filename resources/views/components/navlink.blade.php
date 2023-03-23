@@ -30,7 +30,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.php" class="nav-link text-dark active" aria-current="page">
+            <a href="index.php" class="nav-link text-dark" aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
               <img src="{{ Vite::asset('resources/images/dashboard.png') }}">
               Dashboard
