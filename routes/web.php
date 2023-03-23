@@ -19,19 +19,19 @@ use App\Http\Controllers\Class_SubjectController;
 |
 */
 
-Route::get('/', function () {
-    return view('index', 
-    [
-        'title'=>"Dashboard"
-    ]);
-});
+// Route::get('/', function () {
+//     return view('index', 
+//     [
+//         'title'=>"Dashboard"
+//     ]);
+// });
 
-Route::get('/home', function () {
-    return view('index',
-    [
-        'title'=>"Dashboard"
-    ]);
-});
+// Route::get('/home', function () {
+//     return view('index',
+//     [
+//         'title'=>"Dashboard"
+//     ]);
+// });
 
 Route::resource('courses', CourseController::class);
 Route::resource('subjects', SubjectController::class);
@@ -39,3 +39,8 @@ Route::resource('classes', ClassesController::class);
 Route::resource('faculties', FacultyController::class);
 Route::resource('students', StudentController::class);
 Route::resource('class_subject', Class_SubjectController::class);
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
